@@ -37,10 +37,9 @@ For Software:
 ### Implementation
 For Software:
 # Installation
-[commands]
+No installation done.
 
 # Run
-[commands]
 Open Index File with Chrome
 
 ### Project Documentation
