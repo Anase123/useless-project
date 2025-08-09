@@ -1,0 +1,103 @@
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Body ===== */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background: black;
+  border-bottom: 3px solid #ff0059;
+  box-shadow: 0px 0px 15px #ff0059;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ff0059;
+  text-shadow: 0px 0px 15px #ff0059;
+  animation: glitch 1.5s infinite;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Glitch animation for header */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px #ff0059, -2px -2px #00ffff;
+  }
+  25% {
+    text-shadow: -2px 2px #ff0059, 2px -2px #00ffff;
+  }
+  50% {
+    text-shadow: 2px -2px #ff0059, -2px 2px #00ffff;
+  }
+  75% {
+    text-shadow: -2px -2px #ff0059, 2px 2px #00ffff;
+  }
+  100% {
+    text-shadow: 2px 2px #ff0059, -2px -2px #00ffff;
+  }
+}
+
+/* ===== Game Article Blocks ===== */
+article {
+  background: rgba(30, 30, 30, 0.9);
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(255, 0, 89, 0.5);
+  border: 2px solid #ff0059;
+  animation: slideIn 1s ease forwards;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+/* Slide in animation for blocks */
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Article Heading */
+article h2 {
+  color: #00ffff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-shadow: 0px 0px 10px #00ffff;
+}
+
+/* Hover effect for blocks */
+article:hover {
+  transform: scale(1.03) rotate(-1deg);
+  box-shadow: 0px 0px 25px rgba(255, 0, 89, 1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: black;
+  color: #888;
+  font-size: 0.9rem;
+  border-top: 3px solid #00ffff;
+  box-shadow: 0px 0px 15px #00ffff;
+}

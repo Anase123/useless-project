@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Egg Symmetry Analyzer 🥚</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Egg Symmetry Analyzer</h1>
+      <p class="tag">Is your egg gallery-ready or doomed for omelette fate?</p>
+    </header>
+
+    <main class="container">
+      <section class="controls">
+        <div class="upload-row">
+          <label class="btn">
+            📁 Upload Egg Photo
+            <input id="fileInput" type="file" accept="image/*" />
+          </label>
+
+          <button id="cameraBtn" class="btn">📷 Use Camera</button>
+          <button id="analyzeBtn" class="btn primary" disabled>
+            🔬 Analyze Symmetry
+          </button>
+          <button id="downloadBtn" class="btn" disabled>
+            ⬇️ Download Report
+          </button>
+        </div>
+
+        <div class="hints">
+          <small
+            >Tip: place egg on a plain background and center it for best (fake)
+            results.</small
+          >
+        </div>
+      </section>
+
+      <section class="preview-area">
+        <div class="preview">
+          <canvas id="previewCanvas" width="720" height="480"></canvas>
+          <div id="overlay" class="overlay hidden">
+            <div class="crosshair"></div>
+          </div>
+        </div>
+
+        <div class="analysis">
+          <div id="spinner" class="spinner hidden"></div>
+
+          <div id="progressWrap" class="progressWrap hidden">
+            <div id="progressBar" class="progressBar"></div>
+          </div>
+
+          <div id="result" class="result hidden">
+            <h2>Symmetry Score</h2>
+            <div id="score" class="score">0.0%</div>
+            <p id="verdict" class="verdict"></p>
+
+            <div class="extra">
+              <p id="explanation" class="explanation"></p>
+              <button id="rerunBtn" class="btn">Try Again</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer-note">
+        <small
+          >⚠️ This is intentionally silly — the analyzer is for entertainment
+          and not a real scientific tool.</small
+        >
+      </section>
+    </main>
+
+    <!-- hidden audio (optional) -->
+    <audio id="dingSound" preload="auto">
+      <source src="" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
